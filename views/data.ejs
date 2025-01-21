@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex">
+<% users.forEach((val)=>{ %>
+  <div class="flex items-center gap-4 p-4 bg-white shadow-md rounded-lg w-72">
+    <div class="bg-zinc-200 h-24 w-24 rounded-full flex items-center justify-center">
+     
+      <img src="<%= val.image %>" alt="User Image" class="h-full w-full object-cover">
+    </div>
+    <div>
+      <h2 class="text-lg font-bold text-gray-800"><%=val.username%></h2>
+      <h2 class="text-sm text-gray-600"><%=val.email%></h2>
+      <a href="/delete/<%=val.username%>" class="text-xs underline text-blue-500">delete</a>
+      <a href="/edit/<%=val.username%>" class="text-gray-500 text-xs underline ml-5 ">edit Profile</a>
+    </div>
+  </div>
+<%})%>
+</div>
+</body>
+</html>

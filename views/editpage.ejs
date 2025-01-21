@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/update" method="post">
+    <div>
+    <div class="block m-5 items-center gap-4 p-4 bg-white shadow-md rounded-lg">
+      <label>username</label><hr>
+    <input class="m-3" type="text" placeholder="enter name" name="username" value="<%=user.username%>"/>
+      </div>
+      <div class="block m-5 items-center gap-4 p-4 bg-white shadow-md rounded-lg">
+        <label>email</label><hr>
+      <input class="m-3" type="text" placeholder="enter email" name="email" value="<%=user.email%>"/>
+        </div>
+      </div>
+      <div class="block m-5 items-center gap-4 p-4 bg-white shadow-md rounded-lg">
+        <label>imageurl</label><hr>
+      <input class="m-3" type="text" placeholder="enter imageurl" name="image" value="<%=user.image%>"/>
+        </div>
+      </div>
+      <input type="submit" class="bg-blue-500 ml-5 rounded-lg"/>
+  </form>
+</body>
+</html>
